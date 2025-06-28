@@ -1,8 +1,8 @@
 /* 
     ❓️ Função: ACRCloud (Shazam)
     📃 Descrição: Reconhecer músicas através de áudios, similar ao Shazam. 
-    🏷 Desenvolvedor: Victor Gabriel 
-    🔧 WhatsApp: +55 82 8827-9194
+    🏷 Desenvolvedor: tedzinho
+    🔧 WhatsApp: +55 99 992241471
 */
 
 const fs = require('fs-extra');
@@ -55,11 +55,11 @@ class RecognitionMusic {
             return Promise.resolve({
                job: metadata.music[0].acrid,
                similarity: metadata.music[0].score + "%",
-               producer: metadata.music[0].label || "Sabrina-BOT ©",
+               producer: metadata.music[0].label || "Fenrys-BOT ©",
                duration: duration.default(metadata.music[0].duration_ms).format("mm:ss"),
                genres: metadata.music[0].genres.map(genres => genres.name),
                launch: `${releaseDate[2]}/${releaseDate[1]}/${releaseDate[0]}`,
-               album_name: metadata.music[0].album.name || "Sabrina-BOT ©",
+               album_name: metadata.music[0].album.name || "Fenrys-BOT ©",
                music: metadata.music[0].title,
                artists_name: metadata.music[0].artists.map(artists => artists.name).join(', ')
             });
@@ -72,3 +72,4 @@ class RecognitionMusic {
 }
 
 module.exports = RecognitionMusic;
+

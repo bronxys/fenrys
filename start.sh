@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 🌸🌿 FENRYS BOT V3 - SUA CONEXÃO SUAVE E ENCANTADORA 🌿🌸
+# 🌸🌿 FENRYS BOT V4 - SUA CONEXÃO SUAVE E ENCANTADORA 🌿🌸
 
 # 💖 Função para exibir mensagens coloridas e harmoniosas
 echo_color() {
@@ -63,12 +63,12 @@ apagar_qr() {
     fi
 }
 
-# 🌸 Apresentação do Fenrys Bot V3
+# 🌸 Apresentação do Fenrys Bot V4
 while true; do
     if ! verificar_conexao; then
         clear
         echo_color "pink"  "****************************************************"
-        echo_color "gold"  " 💕✨ Bem-vinda ao Fenrys Bot V3! ✨💕"
+        echo_color "gold"  " 💕✨ Bem-vinda ao Fenrys Bot V4! ✨💕"
         echo_color "pink"  "****************************************************"
         echo ""
         echo_color "lilac" "🌿 Uma conexão delicada e poderosa para você! 🌿"
@@ -117,7 +117,7 @@ while true; do
                     apagar_qr
                     ;;
                 6|6️⃣)
-                    echo_color "red" "👋 Obrigada por usar o FENRYS BOT V3! Até logo! 🌿✨"
+                    echo_color "red" "👋 Obrigada por usar o FENRYS BOT V4! Até logo! 🌿✨"
                     exit 0
                     ;;
                 *)

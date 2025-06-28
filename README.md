@@ -1,50 +1,44 @@
-# 🤖 Fenrys-BOT-V3: Seu Bot de WhatsApp no Termux! 🚀
+<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=4000&color=00008b&center=falso&vCenter=falso&lines=🜛+𝙁𝙀𝙉𝙍𝙔𝙎+𝙑𝟰+🜛;۞+𝙊𝙁𝘾+𝙐𝙋𝘿𝘼𝙏𝙀+۞;@𝙏𝙚𝙙𝙯𝙞𝙣𝙝𝙤">      
 
-Bem-vindo ao Fenrys-BOT-V3, um bot de WhatsApp poderoso e fácil de usar, otimizado para rodar no Termux! Siga os passos abaixo para ter seu próprio bot funcionando em minutos.
+<h1 align="center">
+<p>
+<img src= "https://xatimg.com/image/TyANiC68n4eZ.jpg" alt="𝙁𝙀𝙉𝙍𝙔𝙎 𝙑𝟰" width="720">
+</p>
 
-## 🛠️ Instalação Via Termux
+<p align="center">
+<a href="#"><img title="BOT-MULTI-DEVICE" src="https://img.shields.io/badge/BOT•MULTI•DEVICE-blue?&style=for-the-badge"></a>
+</p>
 
-### Passo 1: Preparando o Ambiente
+<p align="center">
+<img title="Autor" src="https://img.shields.io/badge/Autor-@tedzinho_-orange.svg?style=for-the-badge&logo=github"></a>
+<img title="Versão" src="https://img.shields.io/badge/Versão-4.0.0-orange.svg?style=for-the-badge&logo=github"></a>
+</p>
 
-Primeiro, vamos garantir que seu Termux esteja atualizado e com as ferramentas necessárias:
-
-```bash
+## Instalação Via Termux  <img src="https://user-images.githubusercontent.com/108157095/182052725-6568419a-6a9f-490a-85ea-90b94af694fe.png" height="25px">
+**1° Comando**
+```
 apt-get update -y && pkg upgrade -y && pkg update -y && pkg install nodejs -y && pkg install nodejs-lts -y && pkg install ffmpeg -y && pkg install wget -y && pkg install tesseract -y && pkg install git -y
 ```
+**ATENÇÃO:**
+Será necessário digitar y toda vez que pedir a caixa [y/n]
+---------------------------
 
-**ATENÇÃO:** Será necessário digitar `y` toda vez que o terminal pedir a caixa `[y/n]`.
-
-### Passo 2: Configurando o Armazenamento
-
-Permita que o Termux acesse o armazenamento do seu dispositivo:
-
-```bash
+**2° Comando**
+```
 termux-setup-storage
 ```
-
-### Passo 3: Clonando o Repositório do Bot
-
-Agora, vamos baixar o Fenrys-BOT-V3 para o seu dispositivo:
-
-```bash
-cd /sdcard && git clone https://github.com/TED-BOT-V/Fenrys-BOT-V3
+**3° Comando**
+```
+cd /storage/emulated/0/Download && git clone https://github.com/Tedzinho40/FENRYS-V4
+```
+**4° Comando**
+```
+cd /storage/emulated/0/Download/FENRYS-V4 && npm start
 ```
 
-### Passo 4: Iniciando o Bot
-
-Com o repositório clonado, é hora de iniciar o seu bot:
-
-```bash
-cd Fenrys-BOT-V3 && npm start
+## 💾 START DO BOT 💾 <img src="https://user-images.githubusercontent.com/108157095/182053901-78e4a217-51ba-42a3-8ec5-38ed978ad752.png" height="25px">
+```
+npm start
 ```
 
-
-
-
-
-
-## 📸 Visual do Projeto
-
-![WhatsApp Bot Logo](https://private-us-east-1.manuscdn.com/sessionFile/EsyRUw4SnTpuoUCkyMijGm/sandbox/wNO2JXYdz68L2pJkfpI6YK-images_1750194115459_na1fn_L2hvbWUvdWJ1bnR1L3JlYWRtZV9pbWFnZXMvbmV3X3doYXRzYXBwX2JvdF9sb2dv.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRXN5UlV3NFNuVHB1b1VDa3lNaWpHbS9zYW5kYm94L3dOTzJKWFlkejY4TDJwSmtmcEk2WUstaW1hZ2VzXzE3NTAxOTQxMTU0NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzSmxZV1J0WlY5cGJXRm5aWE12Ym1WM1gzZG9ZWFJ6WVhCd1gySnZkRjlzYjJkdi5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NjcyMjU2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=v52w~IHoUzWYoIRpeW4025srTVPqMZFIjqsPv9UZRHPuz20m2OR3rBuhhgEyvHPvVFDhD48NsgPf3yUju3J83in8fwiCFGNrlCsBAcpKIcnj-JErOUrSqR-3FmjjeIXLBnTkLv0bto1ZxxEksuCEzPvRNkXjR6DmKuYUqMxgBRwv7~oHpoHjS8Uwi86Ky0AcUaTWLgZHgGVfum84TJZ8WOmKzKzSBjPuQLe2PUwKzc~EKeHCngesz4D8xPZ5Q25Uo2BJv0YZ~0k2R3sWlhtgGgUvq-G8Fk0dOZuzm94VADkT0IokAEct1Cd9YZ8FyNQL7Nhcq7oWHDkhzDOxHxhtSQ__)
-
-
+<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=4000&color=00008b&center=falso&vCenter=falso&lines=╰•★𝙵𝚎𝚗𝚛𝚢𝚜-𝚅𝟺★•╯"> 

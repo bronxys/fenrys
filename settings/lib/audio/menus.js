@@ -1,16 +1,15 @@
 const fs = require('fs');
 const { pegarAudioAleatorioBuffer } = require('./audiosAleatorios2');
 
-// Função para deletar arquivo (não usada no momento, mas útil)
 function DLT_FL(filePath) {
   if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
 }
 
 async function menuHandler(tedzinho, from, pushname, date, hora, info, reply, prefix, NomeDoBot) {
   try {
-    const imagemMenu = "https://c.top4top.io/p_34483vrql4.jpg";
+    const imagemMenu = "https://xatimg.com/image/TyANiC68n4eZ.jpg";
 
-    // Áudio do menu
+    // Envia áudio do menu
     const audioBuffer = await pegarAudioAleatorioBuffer();
     if (audioBuffer) {
       await tedzinho.sendMessage(from, {
@@ -23,49 +22,56 @@ async function menuHandler(tedzinho, from, pushname, date, hora, info, reply, pr
       reply("⚠️ O áudio do menu não está disponível no momento.");
     }
 
-    // Envia imagem com botões interativos
+    // Envia imagem com botões personalizados
     await tedzinho.sendMessage(from, {
       image: { url: imagemMenu },
-      caption: `〔💼〕⥲ 𝙉𝙄𝘾𝙆: ${pushname}\n〔📅〕⥲ 𝘿𝘼𝙏𝘼: ${date}\n〔⏰〕⥲ 𝙃𝙊𝙍𝘼: ${hora}\n`,
-      footer: `🌟 ${NomeDoBot} - Seu assistente dedicado 🌟`,
+      caption: `
+╭─❍【🌸 *${NomeDoBot}* 🌸】❍─╮
+│👩‍💻 𝗨𝘀𝘂𝗮́𝗿𝗶𝗮: *${pushname}*
+│📆 𝗗𝗮𝘁𝗮: *${date}*
+│⏰ 𝗛𝗼𝗿𝗮́𝗿𝗶𝗼: *${hora}*
+╰────────────────────╯
+      `.trim(),
+      footer: `🔷 ${NomeDoBot} | Seu assistente com charme e inteligência 💙`,
       buttons: [
         {
           buttonId: 'action',
-          buttonText: { displayText: 'menu' },
+          buttonText: { displayText: '🌐 Comandos do Bot' },
           type: 4,
           nativeFlowInfo: {
             name: 'single_select',
             paramsJson: JSON.stringify({
-              title: "Lista completa",
+              title: "🌐 Lista completa",
               sections: [
                 {
-                  title: "🤖 Comandos do Fenrys",
-                  highlight_label: "By Fenrys BOT",
+                  title: "🌟 Comandos Principais",
+                  highlight_label: "By Fenrys V4",
                   rows: [
-                  { title: "📌 MENU PRINCIPAL", description: "Acesse as informações básicas e os comandos mais usados.", id: `${prefix}menupp` },
-                  { title: "🆕 MENU DE NOVOS CMD", description: "Menu onde vão está sempre os comandos novos!!!", id: `${prefix}menunovo` },
-                  { title: "👑 MENU DONO", description: "Comandos exclusivos reservados ao proprietário do bot.", id: `${prefix}menudono` },
-                  { title: "🛡 MENU ADMIN", description: "Gerencie e proteja seu grupo com essas funções administrativas.", id: `${prefix}menuadm` },
-                  { title: "💎 MENU PREMIUM", description: "Acesso VIP a recursos especiais para membros premium.", id: `${prefix}menupremium` },
-                  { title: "🎭 MENU BRINCADEIRAS", description: "Comandos divertidos e interativos para animar o chat!", id: `${prefix}brincadeiras` },
-                  { title: "📥 EFEITOS EXTERNOS", description: "Aplique efeitos e brilhe rapidamente usando links externos.", id: `${prefix}Efeitosimg` },
-                  { title: "💰 MENU COINS", description: "Gerencie sua economia no bot, ganhe e gaste moedas!", id: `${prefix}menucoins` },
-                  { title: "⚔ MENU RPG", description: "Explore o universo RPG, lute, evolua e vença desafios!", id: `${prefix}menurpg` } // ← Adicionado aqui
+                    { title: "📜 Menu Principal", description: "Comandos básicos e mais utilizados.", id: `${prefix}menupp` },
+                    { title: "🆕 Novos Comandos", description: "Veja o que há de novo no bot.", id: `${prefix}menunovo` },
+                    { title: "👑 Menu do Dono", description: "Acesso exclusivo do criador.", id: `${prefix}menudono` },
+                    { title: "🛡 Administração", description: "Ferramentas para gerenciar grupos.", id: `${prefix}menuadm` },
+                    { title: "💠 Premium", description: "Funções especiais para usuários VIP.", id: `${prefix}menupremium` },
+                    { title: "🎉 Brincadeiras", description: "Comandos para diversão no grupo.", id: `${prefix}brincadeiras` },
+                    { title: "🖼 Efeitos Visuais", description: "Aplique efeitos com estilo.", id: `${prefix}Efeitosimg` },
+                    { title: "🪙 Sistema de Coins", description: "Ganhe e use moedas virtuais.", id: `${prefix}menucoins` },
+                    { title: "⚔️ Mundo RPG", description: "Aventuras, batalhas e evolução.", id: `${prefix}menurpg` },
+                    { title: "🎨 Criação de Logos", description: "Gere logos personalizados.", id: `${prefix}menulogos` }
                   ]
                 },
                 {
-                  title: "💸 Apoie o Projeto",
-                  highlight_label: "Doações",
+                  title: "💖 Apoie o Projeto",
+                  highlight_label: "Doações & Suporte",
                   rows: [
-                    { title: "✨ DOAR VIA PIX", description: "Ajude o projeto a crescer com qualquer valor!", id: `${prefix}doar` }
+                    { title: "🌟 Doar via Pix", description: "Ajude o projeto com sua contribuição!", id: `${prefix}doar` }
                   ]
                 },
                 {
-                  title: "🤝 Grupo & parcerias",
-                  highlight_label: "Grupo Oficial do BOT",
+                  title: "📢 Comunidade Fenrys",
+                  highlight_label: "Fique por dentro!",
                   rows: [
-                    { title: "📱 GRUPO OFICIAL", description: "Entre no nosso grupo e fique por dentro das novidades.", id: `${prefix}grupobot` },
-                    { title: "🤝 PARCERIAS", description: "Tem um projeto e quer fazer parceria? Clique aqui!", id: `${prefix}parcerias` }
+                    { title: "💬 Grupo Oficial", description: "Participe do nosso grupo!", id: `${prefix}grupobot` },
+                    { title: "🤝 Parcerias", description: "Seja um parceiro do projeto!", id: `${prefix}parcerias` }
                   ]
                 }
               ]
@@ -76,13 +82,11 @@ async function menuHandler(tedzinho, from, pushname, date, hora, info, reply, pr
       headerType: 1,
       viewOnce: true
     }, { quoted: info });
-
   } catch (error) {
-    console.error("Erro no menu:", error);
+    console.error("❌ Erro ao exibir menu:", error);
     reply("❌ Ocorreu um erro ao exibir o menu. Tente novamente mais tarde.");
   }
 }
-
 module.exports = {
   menuHandler
 };
